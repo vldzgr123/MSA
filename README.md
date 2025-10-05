@@ -78,6 +78,11 @@ docker-compose --profile prod up -d
 - **Swagger UI**: `http://localhost:8000/docs`
 - **ReDoc**: `http://localhost:8000/redoc`
 
+### Развернутое приложение
+
+- **Live Demo**: [https://msa-blog-platform.onrender.com](https://msa-blog-platform.onrender.com)
+- **API Docs**: [https://msa-blog-platform.onrender.com/docs](https://msa-blog-platform.onrender.com/docs)
+
 ## 🔗 API Endpoints
 
 ### Пользователи
