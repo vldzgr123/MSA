@@ -6,11 +6,11 @@ from alembic import context
 import os
 import sys
 
-# Add the app directory to the Python path
-sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+# Add the src directory to the Python path
+sys.path.append(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'src'))
 
-from app.database import Base
-from app.config import settings
+from src.models.database import Base, User, Article, Comment
+from src.config import settings
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.

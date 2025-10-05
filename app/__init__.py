@@ -1,1 +1,0 @@
-# Blog Platform Backend Package

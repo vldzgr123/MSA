@@ -23,6 +23,9 @@ class Settings(BaseSettings):
     rate_limit_requests: int = 100
     rate_limit_window: int = 900  # 15 minutes in seconds
     
+    # Debug mode
+    debug: bool = False
+    
     class Config:
         env_file = ".env"
 

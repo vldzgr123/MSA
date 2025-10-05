@@ -4,9 +4,9 @@ from fastapi.middleware.trustedhost import TrustedHostMiddleware
 from fastapi.responses import JSONResponse
 import time
 import logging
-from app.config import settings
-from app.database import engine, Base
-from app.routers import articles
+from src.config import settings
+from src.models.database import engine, Base
+from src.routes import users, user, articles, comments
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -58,7 +58,10 @@ async def log_requests(request: Request, call_next):
 
 
 # Include routers
+app.include_router(users.router)
+app.include_router(user.router)
 app.include_router(articles.router)
+app.include_router(comments.router, prefix="/api/articles", tags=["comments"])
 
 
 # Root endpoint
@@ -72,12 +75,25 @@ def root():
         "docs": "/docs",
         "redoc": "/redoc",
         "endpoints": {
+            "users": {
+                "POST /api/users": "Register user",
+                "POST /api/users/login": "Login user"
+            },
+            "user": {
+                "GET /api/user": "Get current user",
+                "PUT /api/user": "Update current user"
+            },
             "articles": {
                 "POST /api/articles": "Create article",
                 "GET /api/articles": "Get all articles",
                 "GET /api/articles/{slug}": "Get article by slug",
                 "PUT /api/articles/{slug}": "Update article",
                 "DELETE /api/articles/{slug}": "Delete article"
+            },
+            "comments": {
+                "POST /api/articles/{slug}/comments": "Add comment to article",
+                "GET /api/articles/{slug}/comments": "Get comments for article",
+                "DELETE /api/articles/{slug}/comments/{id}": "Delete comment"
             }
         }
     }
@@ -111,7 +127,7 @@ async def global_exception_handler(request: Request, exc: Exception):
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(
-        "app.main:app",
+        "src.main:app",
         host="0.0.0.0",
         port=8000,
         reload=True
