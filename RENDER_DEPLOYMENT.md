@@ -79,9 +79,13 @@ DEBUG=false
 
 После успешного деплоя:
 
-1. **Проверьте health check**: `https://your-app.onrender.com/health`
-2. **Откройте API документацию**: `https://your-app.onrender.com/docs`
+1. **Проверьте health check**: [https://msa-zfd1.onrender.com/health](https://msa-zfd1.onrender.com/health)
+2. **Откройте API документацию**: [https://msa-zfd1.onrender.com/docs](https://msa-zfd1.onrender.com/docs)
 3. **Проверьте логи** в панели Render
+
+### ✅ Успешно развернуто!
+
+Приложение успешно работает по адресу: [https://msa-zfd1.onrender.com](https://msa-zfd1.onrender.com)
 
 ## 🔐 Безопасность
 

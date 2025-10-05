@@ -80,8 +80,8 @@ docker-compose --profile prod up -d
 
 ### Развернутое приложение
 
-- **Live Demo**: [https://msa-blog-platform.onrender.com](https://msa-blog-platform.onrender.com)
-- **API Docs**: [https://msa-blog-platform.onrender.com/docs](https://msa-blog-platform.onrender.com/docs)
+- **Live Demo**: [https://msa-zfd1.onrender.com](https://msa-zfd1.onrender.com)
+- **API Docs**: [https://msa-zfd1.onrender.com/docs](https://msa-zfd1.onrender.com/docs)
 
 ## 🔗 API Endpoints
 

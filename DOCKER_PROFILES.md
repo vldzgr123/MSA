@@ -2,6 +2,11 @@
 
 Этот проект использует Docker Compose профили для разных сценариев развертывания.
 
+## 🌐 Развернутое приложение
+
+- **Live Demo**: [https://msa-zfd1.onrender.com](https://msa-zfd1.onrender.com)
+- **API Docs**: [https://msa-zfd1.onrender.com/docs](https://msa-zfd1.onrender.com/docs)
+
 ## Профили
 
 ### `dev` - Локальная разработка

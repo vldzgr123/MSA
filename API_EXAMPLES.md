@@ -1,5 +1,12 @@
 # Примеры использования API (Python/FastAPI с аутентификацией)
 
+## 🌐 Развернутое приложение
+
+- **Live Demo**: [https://msa-zfd1.onrender.com](https://msa-zfd1.onrender.com)
+- **API Docs**: [https://msa-zfd1.onrender.com/docs](https://msa-zfd1.onrender.com/docs)
+
+> **Примечание**: Замените `http://localhost:8000` на `https://msa-zfd1.onrender.com` для тестирования развернутого приложения.
+
 ## Регистрация пользователя
 
 ```bash

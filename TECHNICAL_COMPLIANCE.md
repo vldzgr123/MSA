@@ -105,5 +105,11 @@ env:
 5. **Health checks** для мониторинга
 6. **Профили развертывания** для разных сред
 
+### ✅ Успешно развернуто!
+
+- **Live Demo**: [https://msa-zfd1.onrender.com](https://msa-zfd1.onrender.com)
+- **API Docs**: [https://msa-zfd1.onrender.com/docs](https://msa-zfd1.onrender.com/docs)
+- **Health Check**: [https://msa-zfd1.onrender.com/health](https://msa-zfd1.onrender.com/health)
+
 Все требования выполнены на 100%! 🎉
 
