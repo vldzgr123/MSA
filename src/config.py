@@ -26,6 +26,10 @@ class Settings(BaseSettings):
     # Debug mode
     debug: bool = False
     
+    # Render specific settings
+    port: int = 8000
+    host: str = "0.0.0.0"
+    
     class Config:
         env_file = ".env"
 

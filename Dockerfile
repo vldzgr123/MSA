@@ -31,5 +31,17 @@ USER appuser
 # Expose port
 EXPOSE 8000
 
+# Create startup script
+RUN echo '#!/bin/bash\n\
+echo "🚀 Starting Blog Platform API..."\n\
+echo "📊 DATABASE_URL: $DATABASE_URL"\n\
+\n\
+# Wait for database and run migrations\n\
+python init_db.py\n\
+\n\
+# Start the application\n\
+exec uvicorn src.main:app --host 0.0.0.0 --port 8000 --workers 1\n\
+' > /app/start.sh && chmod +x /app/start.sh
+
 # Run the application
-CMD ["uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["/app/start.sh"]
