@@ -26,10 +26,10 @@ def test_api():
     # 2. Регистрация пользователя
     print("\n2. Регистрация пользователя...")
     user_data = {
-        "email": "test@example.com",
+        "email": "testuser@example.com",
         "username": "testuser",
-        "password": "password123",
-        "bio": "Test user bio"
+        "password": "password",
+        "bio": "testbio"
     }
     
     try:
@@ -50,8 +50,8 @@ def test_api():
     # 3. Логин пользователя
     print("\n3. Логин пользователя...")
     login_data = {
-        "email": "test@example.com",
-        "password": "password123"
+        "email": "testuser@example.com",
+        "password": "password"
     }
     
     try:
