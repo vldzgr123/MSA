@@ -1,6 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 from uuid import UUID
+from pydantic import PositiveInt
 from typing import List
 
 from src.models.database import get_db
@@ -58,8 +59,8 @@ async def create_comment(
 @router.get("/{slug}/comments", response_model=SuccessResponse)
 async def get_comments(
     slug: str,
-    skip: int = 0,
-    limit: int = 100,
+    skip: PositiveInt = 0,
+    limit: PositiveInt = 100,
     db: Session = Depends(get_db)
 ):
     """Get all comments for an article"""

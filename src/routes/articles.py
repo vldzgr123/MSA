@@ -1,5 +1,6 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
+from pydantic import PositiveInt
 from typing import List
 from src.models.database import get_db, User
 from src.models.schemas import (
@@ -48,8 +49,8 @@ def create_article(
 
 @router.get("/", response_model=SuccessResponse)
 def get_articles(
-    skip: int = 0,
-    limit: int = 100,
+    skip: PositiveInt = 0,
+    limit: PositiveInt = 100,
     db: Session = Depends(get_db)
 ):
     """Get all articles with pagination"""
