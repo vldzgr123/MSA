@@ -14,6 +14,9 @@ from src.models.schemas import (
 )
 from src.controllers.crud import ArticleCRUD
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
+from fastapi import HTTPException, status
+from jose import JWTError
+from src.config import settings
 
 router = APIRouter(prefix="/api/articles", tags=["articles"])
 
@@ -22,9 +25,6 @@ security = HTTPBearer()
 
 def get_user_id_from_token(credentials: HTTPAuthorizationCredentials = Depends(security)) -> UUID:
     """Extract user_id from JWT token"""
-    from fastapi import HTTPException, status
-    from jose import JWTError
-    from src.config import settings
     
     credentials_exception = HTTPException(
         status_code=status.HTTP_401_UNAUTHORIZED,
